@@ -1,0 +1,171 @@
+
+* {
+    padding: 0px; 
+    margin: 0px;
+    box-sizing: border-box;
+
+}
+
+body {
+    font-family: system-ui;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    background-color: #64718b;
+    padding: 0px 100px 0px 100px; 
+    align-items: center
+}
+
+.logo {
+    color: #e5e7eb;
+}
+
+.button-navbar{
+    padding: 5px 20px;
+    background-color: #64718b;
+    color: white;
+    margin-right: 8px;
+    border: none;
+    outline: solid deepskyblue;
+    border-radius: 5px;
+    cursor: pointer
+}
+
+.main-section{
+    height: 350px;
+    background-color:#eaeaea;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1{
+    margin-bottom: 10px;
+    font-size: 35px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h2 {
+    color: #64718b;
+    font-weight: 600;
+    font-style: italic
+}
+
+.container {
+    padding: 0px 400px ;
+}
+
+.container-buttons {
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.button {
+    border-radius: 5px;
+    margin-right: 8px;
+    border: none;
+    outline: solid deepskyblue;
+    padding: 8px;
+    width: 75px;
+    cursor: pointer
+}
+
+.title {
+    padding: 20px;
+}
+
+.paragraph {
+    background-color: #e5e7eb;
+    padding: 10px;
+    margin-bottom: 10px;
+    
+}
+
+
+.paragraph:hover {
+     background-color: yellow;
+}
+
+.input-radio {
+
+    margin-right: 10px;
+    
+}
+
+.footer {
+    margin-top: 30px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.footer-conteudo {
+    margin-bottom: 60px;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.list {
+    text-align: left;
+    list-style-type: none;
+}
+
+.list-social-media {
+    text-align: left;
+    list-style-type: none;
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+}
+
+.card-section {
+    padding: 0px 400px;
+    gap: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 500px;
+    background: gray;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+.card:hover {
+    background-color: darkgray;
+    transition: all 0.50s;
+    transform: scale(1.10);
+}
+
+.card {
+    background: dimgray;
+    color: wheat;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    word-wrap: break-word;
+    padding: 15px;
+    border-radius: 15px;
+    justify-content: center;
+    outline: solid lightcyan;
+
+    h2 {
+        color:lavender;
+        font-style: normal;
+    }
+        
+}
+
+
+
+.carousel-img {
+    background-color: white;   
+}
