@@ -1,43 +1,25 @@
 "use client"
-import { Fragment } from "react"
 import { data } from "../../staticData/data"
 
 export function Questions() {
 
-console.log(data)
-
-
-
-
-
     return (
         <>
-            <div class="question">
+        <div class="question">
             
-            <p>{data.map(item => {
+            <p>{data.map(object => {
                 return(
                     <>
-                        <div id="title" key={item.title} class="title">
-                            {item.title}
+                        <div id="title" key={object.title} class="title">
+                            {object.title}
                         </div>
 
-
-                        <div id="alternatives" class="alternatives">
+                        {object.alternatives.map(item => <div id="alternatives" key={item} class="alternatives">
                             <p class="paragraph" id="correct-1">
                                 <input type="radio" class="input-radio" name="question" />
-                                A- Discover a fact or piece of information 
+                                {item}
                             </p>
-
-                            <p class="paragraph">
-                                <input type="radio" class="input-radio" name="question" /> 
-                                B- Means to eventually decide something    
-                            
-                            </p>
-                            <p class="paragraph">
-                                <input type="radio" class="input-radio" name="question" />
-                                C- To have a good relationship with someone    
-                            </p>
-                        </div>
+                        </div>)}
 
                         <div id="buttons" class="question-buttons">
                             {/* <button class="button">
@@ -53,11 +35,7 @@ console.log(data)
                     </>
                 )} )}                                                            
             </p>
-
-                
-            
-                
-            </div>
+        </div>
         </>
     )
 }

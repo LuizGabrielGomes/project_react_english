@@ -5,6 +5,7 @@ export const data = [
             "to Cancel something",
             "continue",
             "discover or learn",
+            "stop",
         ]
     },
     {
@@ -31,7 +32,4 @@ export const data = [
             "to have a good relationship with someone",
         ]
     },
-    {
-        title: "abc"
-    }
 ]
