@@ -6,21 +6,22 @@ export function Footer() {
             <footer class="footer">
 
                 <div class="footer-conteudo">
-                    <div>
+
+                    <div class="footer-section">
                         <h3>Sobre</h3>
                         <p>
                             Paginas sobre Phrasal verbs em ingles
                         </p>
                     </div>
 
-                    <div>
+                    <div class="footer-section">
                         <h3>Contato</h3>
                         <p>
                             contato@gmail.com
                         </p>
                     </div>
 
-                    <div>
+                    <div class="footer-section">
                         <h3>Redes Sociais</h3>
                         <ul class="list-social-media">
                             <li>
@@ -45,7 +46,7 @@ export function Footer() {
                         </ul>
                     </div>
 
-                    <div>
+                    <div class="footer-section">
                         <h3>Politicas</h3>
                         <ul class="list">
                         

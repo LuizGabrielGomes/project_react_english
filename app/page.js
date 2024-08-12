@@ -14,9 +14,9 @@ export default function Home() {
 
       <MainSection />
 
-      <Card />
+      <Card />  
     
-      <Questions />
+      {/* <Questions /> */}
 
       <Footer />
     </> 

@@ -16,7 +16,10 @@ body {
     height: 50px;
     background-color: #64718b;
     padding: 0px 100px 0px 100px; 
-    align-items: center
+    align-items: center;
+    @media screen and (max-width: 480px) {
+        padding: 0px 20px 0px 20px;
+    }
 }
 
 .logo {
@@ -47,6 +50,10 @@ h1{
     margin-bottom: 10px;
     font-size: 35px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    @media screen and (max-width: 480px) {
+        text-align: center;
+        font-size: 30px;
+    }
 }
 
 h2 {
@@ -103,13 +110,25 @@ h2 {
     margin-bottom: 50px;
 }
 
+.footer-section {
+    margin-top: 20px;
+}
+
+
 .footer-conteudo {
     margin-bottom: 60px;
     margin-top: 60px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    @media screen and (max-width: 480px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
 }
+
 
 .list {
     text-align: left;
@@ -134,6 +153,10 @@ h2 {
     background: gray;
     align-items: center;
     flex-wrap: wrap;
+    @media screen and (max-width: 480px) {
+        height: auto;
+        padding: 20px;
+    }
 }
 
 
@@ -144,6 +167,7 @@ h2 {
 }
 
 .card {
+    text-align: center; 
     background: dimgray;
     color: wheat;
     height: 150px;
