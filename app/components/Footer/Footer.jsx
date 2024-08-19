@@ -1,5 +1,7 @@
 "use client"
 
+import Link from "next/link"
+
 export function Footer() {
     return (
         <>
@@ -50,8 +52,8 @@ export function Footer() {
                         <h3>Politicas</h3>
                         <ul class="list">
                         
-                            <li>Termos e Condicoes de Uso</li>
-                            <li>Politica de Privacidade</li>
+                            <li><Link href={"/pages/termsAndConditions"}>Termos e Condicoes de Uso</Link></li>
+                            <li><Link href={"/pages/privacyPolicy"}>Politica de Privacidade</Link></li>
                             <li>Politica de Cookies</li>
 
                         </ul>
