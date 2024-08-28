@@ -1,5 +1,7 @@
 "use client"
 
+import Link from "next/link"
+
 export function Navbar() {
     return (
         <>
@@ -9,7 +11,7 @@ export function Navbar() {
                 </div>
 
                 <nav class="navbar">
-                    <button class="button-navbar">Login</button>
+                    <button class="button-navbar"><Link href={"/pages/login"}>Login</Link></button>
                     <button class="button-navbar">SignUp</button>
                 </nav>
             </header>
@@ -17,3 +19,6 @@ export function Navbar() {
 
     )
 }
+
+
+{/* <li><Link href={"/pages/termsAndConditions"}>Termos e Condicoes de Uso</Link></li> */}

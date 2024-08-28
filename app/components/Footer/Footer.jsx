@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import { list } from "postcss"
 
 export function Footer() {
     return (
@@ -18,9 +19,9 @@ export function Footer() {
 
                     <div class="footer-section">
                         <h3>Contato</h3>
-                        <p>
-                            contato@gmail.com
-                        </p>
+                        <ul class="list">
+                            <li><Link href={"mailto:contato@gmail.com"}>contato@gmail.com</Link></li>
+                        </ul> 
                     </div>
 
                     <div class="footer-section">
@@ -51,11 +52,8 @@ export function Footer() {
                     <div class="footer-section">
                         <h3>Politicas</h3>
                         <ul class="list">
-                        
                             <li><Link href={"/pages/termsAndConditions"}>Termos e Condicoes de Uso</Link></li>
                             <li><Link href={"/pages/privacyPolicy"}>Politica de Privacidade</Link></li>
-                            <li>Politica de Cookies</li>
-
                         </ul>
                     </div>
                 </div>
