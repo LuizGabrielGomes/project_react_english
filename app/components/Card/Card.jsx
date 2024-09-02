@@ -1,7 +1,9 @@
 "use client"
 
 export function Card() {
-    return (
+    console.log()
+    return (   
+
         <>
             <div class="card-section">
                 <div class="card">
