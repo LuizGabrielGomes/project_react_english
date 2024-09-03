@@ -11,7 +11,7 @@ export function Navbar() {
                 </div>
 
                 <nav class="navbar">
-                    <button class="button-navbar"><Link href={"/pages/login"}>Login</Link></button>
+                    <Link href={"/pages/login"}><button class="button-navbar">Login</button></Link>
                     <button class="button-navbar">SignUp</button>
                 </nav>
             </header>
