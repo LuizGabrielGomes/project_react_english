@@ -13,7 +13,7 @@ body {
 .header {
     display: flex;
     justify-content: space-between;
-    height: 50px;
+    height: 60px;
     background-color: #64718b;
     padding: 0px 100px 0px 100px; 
     align-items: center;
@@ -24,6 +24,7 @@ body {
 
 .logo {
     color: #e5e7eb;
+    font-size: 25px;
 }
 
 .button-navbar{
@@ -152,12 +153,12 @@ h2 {
     flex-direction: row;
     justify-content: center;
     height: 500px;
-    background: gray;
+    background: #729eca;
     align-items: center;
     flex-wrap: wrap;
     @media screen and (max-width: 480px) {
         height: auto;
-        padding: 20px;
+        padding: 40px 0px;
     }
 }
 
@@ -175,8 +176,9 @@ a {
 }
 
 .card {
+    font-size: 20px;
     text-align: center; 
-    background: dimgray;
+    background: #4d7ca6;
     color: wheat;
     height: 150px;
     display: flex;
@@ -186,8 +188,14 @@ a {
     word-wrap: break-word;
     padding: 15px;
     border-radius: 15px;
-    justify-content: center;
+    justify-content: flex-start;
     outline: solid lightcyan;
+    
+    @media screen and (max-width: 480px) {
+        font-size: 15px;
+        height: 130px;
+        width: 150px;
+    }
 
     h2 {
         color:lavender;

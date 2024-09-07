@@ -11,21 +11,21 @@ export function Footer() {
                 <div class="footer-conteudo">
 
                     <div class="footer-section">
-                        <h3>Sobre</h3>
+                        <h3>About</h3>
                         <p>
-                            Paginas sobre Phrasal verbs em ingles
+                            Page about phrasal verb
                         </p>
                     </div>
 
                     <div class="footer-section">
-                        <h3>Contato</h3>
+                        <h3>Contact</h3>
                         <ul class="list">
-                            <li><Link href={"mailto:contato@gmail.com"}>contato@gmail.com</Link></li>
+                            <li><Link href={"mailto:contato@gmail.com"}>contact@gmail.com</Link></li>
                         </ul> 
                     </div>
 
                     <div class="footer-section">
-                        <h3>Redes Sociais</h3>
+                        <h3>Social Media</h3>
                         <ul class="list-social-media">
                             <li>
                                 <svg 
@@ -50,17 +50,17 @@ export function Footer() {
                     </div>
 
                     <div class="footer-section">
-                        <h3>Politicas</h3>
+                        <h3>Policies</h3>
                         <ul class="list">
-                            <li><Link href={"/pages/termsAndConditions"}>Termos e Condicoes de Uso</Link></li>
-                            <li><Link href={"/pages/privacyPolicy"}>Politica de Privacidade</Link></li>
+                            <li><Link href={"/pages/termsAndConditions"}>Terms And Conditions</Link></li>
+                            <li><Link href={"/pages/privacyPolicy"}>Privacy Policy</Link></li>
                         </ul>
                     </div>
                 </div>
                                     
                 <div>        
                     <p>     
-                        © 2023 Luiz. Todos os direitos reservados.
+                        © 2023 Luiz Gabriel Gomes. All rights reserved.
                     </p>
                 </div>
 
