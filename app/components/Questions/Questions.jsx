@@ -21,7 +21,7 @@ export function Questions() {
 
      // Passo 3) Sabendo qual e a alternativa correta quero que mude o CSS para fundo da alternativa ficar verde. 
     const changeBackgroundWhenIsCorrect = (alternative) => {
-        return (state === true && alternative.isCorrect) ? { backgroundColor: "green"} : null;
+        return (state === true && alternative.isCorrect) ? { backgroundColor: "#22c55e", color: "#fff"} : null;
     }
 
     return (
