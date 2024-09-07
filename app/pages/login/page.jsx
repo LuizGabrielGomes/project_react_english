@@ -3,19 +3,52 @@
 import { Input } from "postcss"
 import { Placeholder } from "react-bootstrap"
 import "./styles.css"
+import { useState } from "react"
 
 export default function login() {
-    return (
+    const [email, setEmail] = useState("")
+
+    const [password, setPassword] = useState("")
+
+
+const handleChangePassword = (event) => {
+    setPassword(event.target.value)
+}
+
+const handleChange = (event) => {
+    setEmail(event.target.value)
+}
+
+    return (    
         <>
+            <p>{email}</p>
+            <p>{password}</p>
+
             <div class="container">
                 <form class="form">
                     <label htmlFor="login" class="login">Login</label>
                     
-                    <input class="input" required type="email" id="login" placeholder="name@gmail.com" />
-
-
-                    <label htmlFor="password" class="password" >Password</label>
-                    <input class="input" required type="password" id="password" placeholder="********" />
+                    <input 
+                        class="input" 
+                        required 
+                        type="email" 
+                        id="login" 
+                        placeholder="name@gmail.com" 
+                        value={email}
+                        onChange={handleChange}
+                    />
+                
+                    <label htmlFor="password" class="password">Password</label>
+                    
+                    <input 
+                        class="input" 
+                        required 
+                        type="password" 
+                        id="password" 
+                        placeholder="********" 
+                        value={password}
+                        onChange={handleChangePassword}
+                    />
 
                     <div class="container-button"> 
                         <button class="button">click</button> 

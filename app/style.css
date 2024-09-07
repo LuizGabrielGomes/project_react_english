@@ -64,6 +64,9 @@ h2 {
 
 .question {
     padding: 0px 400px ;
+    @media screen and (max-width: 480px) {
+    padding: 0px 20px;
+    }
 }
 
 .question-buttons {
