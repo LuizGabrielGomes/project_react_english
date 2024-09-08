@@ -24,12 +24,12 @@ const handleChange = (event) => {
             <p>{email}</p>
             <p>{password}</p>
 
-            <div class="container">
-                <form class="form">
-                    <label htmlFor="login" class="login">Login</label>
+            <div className="container">
+                <form className="form">
+                    <label htmlFor="login" className="login">Login</label>
                     
                     <input 
-                        class="input" 
+                        className="input" 
                         required 
                         type="email" 
                         id="login" 
@@ -38,10 +38,10 @@ const handleChange = (event) => {
                         onChange={handleChange}
                     />
                 
-                    <label htmlFor="password" class="password">Password</label>
+                    <label htmlFor="password" className="password">Password</label>
                     
                     <input 
-                        class="input" 
+                        className="input" 
                         required 
                         type="password" 
                         id="password" 
@@ -50,8 +50,8 @@ const handleChange = (event) => {
                         onChange={handleChangePassword}
                     />
 
-                    <div class="container-button"> 
-                        <button class="button">click</button> 
+                    <div className="container-button"> 
+                        <button className="button">click</button> 
                     </div>  
                 </form>
             </div>

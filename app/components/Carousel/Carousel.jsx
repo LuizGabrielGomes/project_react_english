@@ -7,10 +7,10 @@ export function CarouselComponent() {
     return (
         <Carousel>
             <Carousel.Item>
-                <Image src={banner} height={100} style={{ width: '100%', "object-fit": "cover"}} />
+                <Image alt="banner with the text let's start" src={banner} height={100} style={{ width: '100%', "object-fit": "cover"}} />
             </Carousel.Item>
             <Carousel.Item>
-                <Image src={banner2} height={100} style={{ width: '100%', "object-fit": "cover"}} />
+                <Image alt="banner with the text study english" src={banner2} height={100} style={{ width: '100%', "object-fit": "cover"}} />
             </Carousel.Item>
         </Carousel>
     );

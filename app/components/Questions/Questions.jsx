@@ -5,7 +5,8 @@ import { data } from "../../staticData/data"
 
 export function Questions() {
     const [state, setState] = useState(false);
-
+    const [questionId, setQuestionId]= useState("");
+    
     function correction(object) {
         // Passo 1) Receber o objeto com todas as infos da questao (para sabermos a alternativa correta)
         console.log("object", object)
@@ -15,44 +16,47 @@ export function Questions() {
             if(item.isCorrect === true) {
                 // Muda o estado (state) e com isso mudar a alternativa para considerar o isCorrect.
                 setState(true)
+                setQuestionId(object._id)
             }
         })
     }
 
      // Passo 3) Sabendo qual e a alternativa correta quero que mude o CSS para fundo da alternativa ficar verde. 
-    const changeBackgroundWhenIsCorrect = (alternative) => {
-        return (state === true && alternative.isCorrect) ? { backgroundColor: "#22c55e", color: "#fff"} : null;
+    const changeBackgroundWhenIsCorrect = (object, alternative) => {
+        return (state === true && object._id === questionId && alternative.isCorrect) ? { backgroundColor: "green", color: "#fff"} : null;
     }
 
     return (
         <>
-            <div class="question">
+            <div className="question">
                 
-                <p>{data.map(object => {
+                <div>{data.map(object => {
                     return(
-                        <>
-                            <div id="title" key={object.title} class="title">
+                        <div key={object._id}>
+                            <div id="title"  className="title">
                                 {object.title}
                             </div>
 
-                            {object.alternatives.map(item => <div id={item.alternative} key={item} class="alternatives">
-                                <p class="paragraph" style={ changeBackgroundWhenIsCorrect(item) }>
-                                    <input type="radio" class="input-radio" name="question" />
-                                    {item.alternative}
-                                </p>
-                            </div>)}
+                            {object.alternatives.map(item => 
+                                <div id={item.alternative} key={item.alternative} className="alternatives">
+                                    <label htmlFor={item.alternative + "alternative"} className="paragraph" style={ changeBackgroundWhenIsCorrect(object, item) }>
+                                        <input id={item.alternative + "alternative"} type="radio" className="input-radio" name={item} />
+                                        {item.alternative}
+                                    </label>
+                                </div>
+                            )}
 
-                            <div id="buttons" class="question-buttons">
+                            <div id="buttons" className="question-buttons">
                                 <button 
-                                    class="button" 
+                                    className="button" 
                                     onClick={(event) => correction(object)}
                                 >
                                     correction
                                 </button>
                             </div>
-                        </>
+                        </div>
                     )} )}                                                            
-                </p>
+                </div>
             </div>
         </>
     )

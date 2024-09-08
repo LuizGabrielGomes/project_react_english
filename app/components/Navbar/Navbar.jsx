@@ -5,14 +5,14 @@ import Link from "next/link"
 export function Navbar() {
     return (
         <>
-            <header class="header">
-                <div class="logo">
+            <header className="header">
+                <div className="logo">
                     PhrasalVerbs
                 </div>
 
-                <nav class="navbar">
-                    <Link href={"/pages/login"}><button class="button-navbar">Login</button></Link>
-                    <button class="button-navbar">SignUp</button>
+                <nav className="navbar">
+                    <Link href={"/pages/login"}><button className="button-navbar">Login</button></Link>
+                    <button className="button-navbar">SignUp</button>
                 </nav>
             </header>
         </>
