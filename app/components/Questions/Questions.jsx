@@ -26,33 +26,35 @@ export function Questions() {
 
     return (
         <>
-            <div class="question">
+            <div className="question">
                 
-                <p>{data.map(object => {
+                <div>{data.map(object => {
                     return(
-                        <>
-                            <div id="title" key={object.title} class="title">
+                        <div key={object._id}>
+                            <div id="title"  className="title">
                                 {object.title}
                             </div>
 
-                            {object.alternatives.map(item => <div id={item.alternative} key={item} class="alternatives">
-                                <p class="paragraph" style={ changeBackgroundWhenIsCorrect(item) }>
-                                    <input type="radio" class="input-radio" name="question" />
-                                    {item.alternative}
-                                </p>
-                            </div>)}
+                            {object.alternatives.map(item => 
+                                <div id={item.alternative} key={item} className="alternatives">
+                                    <p className="paragraph" style={ changeBackgroundWhenIsCorrect(item) }>
+                                        <input type="radio" className="input-radio" name="question" />
+                                        {item.alternative}
+                                    </p>
+                                </div>
+                            )}
 
-                            <div id="buttons" class="question-buttons">
+                            <div id="buttons" className="question-buttons">
                                 <button 
-                                    class="button" 
+                                    className="button" 
                                     onClick={(event) => correction(object)}
                                 >
                                     correction
                                 </button>
                             </div>
-                        </>
+                        </div>
                     )} )}                                                            
-                </p>
+                </div>
             </div>
         </>
     )
