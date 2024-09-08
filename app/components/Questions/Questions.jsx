@@ -36,7 +36,7 @@ export function Questions() {
                             </div>
 
                             {object.alternatives.map(item => 
-                                <div id={item.alternative} key={item} className="alternatives">
+                                <div id={item.alternative} key={item.alternative} className="alternatives">
                                     <p className="paragraph" style={ changeBackgroundWhenIsCorrect(item) }>
                                         <input type="radio" className="input-radio" name="question" />
                                         {item.alternative}
