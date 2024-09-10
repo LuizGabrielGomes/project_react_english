@@ -20,11 +20,11 @@ const handleChange = (event) => {
 }
 
     return (    
-        <>
+        <div className="container-login">
             <p>{email}</p>
             <p>{password}</p>
 
-            <div className="container">
+            <div className="container-form">
                 <form className="form">
                     <label htmlFor="login" className="login">Login</label>
                     
@@ -55,6 +55,6 @@ const handleChange = (event) => {
                     </div>  
                 </form>
             </div>
-        </>
+        </div>
     )    
 }

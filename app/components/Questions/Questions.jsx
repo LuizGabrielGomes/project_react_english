@@ -2,14 +2,27 @@
 
 import { useState } from "react"
 import { data } from "../../staticData/data"
+import Modal from 'react-modal';
 
 export function Questions() {
     const [state, setState] = useState(false);
     const [questionId, setQuestionId]= useState("");
+    const [modalIsOpen, setModalIsOpen] = useState(false);
     
+    const customStyles = {
+        content: {
+        top: '50%',
+        left: '50%',
+        right: 'auto',
+        bottom: 'auto',
+        marginRight: '-50%',
+        transform: 'translate(-50%, -50%)',
+        },
+    };
+
     function correction(object) {
         // Passo 1) Receber o objeto com todas as infos da questao (para sabermos a alternativa correta)
-        console.log("object", object)
+        // console.log("object", object)
 
         // Passo 2) Quero separar a alternativa correta das demais. 
         const isCorrect = object.alternatives.map(item => {
@@ -17,17 +30,32 @@ export function Questions() {
                 // Muda o estado (state) e com isso mudar a alternativa para considerar o isCorrect.
                 setState(true)
                 setQuestionId(object._id)
+                setModalIsOpen(true)
             }
         })
     }
 
      // Passo 3) Sabendo qual e a alternativa correta quero que mude o CSS para fundo da alternativa ficar verde. 
     const changeBackgroundWhenIsCorrect = (object, alternative) => {
-        return (state === true && object._id === questionId && alternative.isCorrect) ? { backgroundColor: "green", color: "#fff"} : null;
+        return (state === true && object._id === questionId && alternative.isCorrect) ?  { backgroundColor: "#22c55e", color: "#fff"} : null;
     }
+
+    function handleModal() {
+        setModalIsOpen(false)
+    } 
+    
 
     return (
         <>
+            <Modal
+                isOpen={modalIsOpen}
+                ariaHideApp={false}
+                style={customStyles}
+            >
+                <p>Congratulations, you got it right</p>
+                <button onClick={() => handleModal()}>Close</button>
+            </Modal>
+
             <div className="question">
                 
                 <div>{data.map(object => {
