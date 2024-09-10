@@ -1,5 +1,6 @@
 "use client"
 
+import "./styles.css"
 import { useState } from "react"
 import { data } from "../../staticData/data"
 import Modal from 'react-modal';
@@ -53,7 +54,10 @@ export function Questions() {
                 style={customStyles}
             >
                 <p>Congratulations, you got it right</p>
-                <button onClick={() => handleModal()}>Close</button>
+
+                <div>
+                    <button  onClick={() => handleModal()} className="button-question">Close</button>
+                </div> 
             </Modal>
 
             <div className="question">
