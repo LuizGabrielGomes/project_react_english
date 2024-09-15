@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  ul {
+    padding-left: 0rem 
+  }
+}

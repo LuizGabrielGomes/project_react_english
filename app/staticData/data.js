@@ -39,13 +39,13 @@ export const data = [
             { alternative: "to have a good relationship with someone" , isCorrect: false},
         ]
     },
-    // {
-    //     _id: "05",
-    //     title: "What is the meaning of watch out?",
-    //     alternatives: [
-    //         { alternative: "To delay doing something", isCorrect: false },
-    //         { alternative: "To be careful of danger", isCorrect: true },
-    //         { alternative: "To tolerate something", isCorrect: false },
-    //     ]
-    // },
+    {
+        _id: "05",
+        title: "What is the meaning of watch out?",
+        alternatives: [
+            { alternative: "To delay doing something", isCorrect: false },
+            { alternative: "To be careful of danger", isCorrect: true },
+            { alternative: "To tolerate something", isCorrect: false },
+        ]
+    },
 ]
