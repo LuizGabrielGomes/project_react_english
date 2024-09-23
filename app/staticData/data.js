@@ -1,7 +1,7 @@
 export const data = [
     {
         _id: "01",
-        title: "What is the mean of Carry on?",
+        title: "What is the meaning of Carry on?",
         alternatives: [
             { alternative: "to Cancel something", isCorrect: false},
             { alternative: "continue", isCorrect: true},
@@ -10,20 +10,16 @@ export const data = [
     },
     {
         _id: "02",
-        title: "What is the mean of back up?",
+        title: "What is the meaning of back up?",
         alternatives: [
             { alternative: "return to the place " , isCorrect: false},
             { alternative: "do a review" , isCorrect: false},
             { alternative: "support or defend someone" , isCorrect: true},
         ]
     },
-
-
-
-
     {
         _id: "03",
-        title: "What is the mean of Get along/ Get on/ Get on with?",
+        title: "What is the meaning of Get along/ Get on/ Get on with?",
         alternatives: [
             { alternative: "stay for a long time" , isCorrect: false },
             { alternative: "take a long time" , isCorrect: false},
