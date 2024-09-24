@@ -56,8 +56,18 @@ export default function signUp() {
                         placeholder="******" 
                     />
 
+                    <div className="container-button">
+                        <button className="button">Send</button>
+                    </div>
+
                 </form>    
             </div>      
         </div>
     )
 }
+
+
+
+// <div className="container-button"> 
+// <button className="button">Send</button> 
+// </div>  

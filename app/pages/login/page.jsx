@@ -51,7 +51,7 @@ const handleChange = (event) => {
                     />
 
                     <div className="container-button"> 
-                        <button className="button">click</button> 
+                        <button className="button">Send</button> 
                     </div>  
                 </form>
             </div>
