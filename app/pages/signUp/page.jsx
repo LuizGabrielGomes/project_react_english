@@ -5,9 +5,9 @@ import { useState } from "react"
 
 export default function signUp() {
 //name, surname, email, password, repeat,//
-//caixa de texto(textArea): caixa de sugestoes//  
+//caixa de texto(textArea): caixa de sugestoes//
     return (
-        <div>
+        <div className="container-signup">
     
             <div className="container-form">
                 <form className="form">
@@ -24,8 +24,8 @@ export default function signUp() {
                     <input  
                         required 
                         type="text" 
-                        id="Surname" 
-                        placeholder="Surname"
+                        id="surname" 
+                        placeholder="surname"
                     />
 
                     
@@ -37,6 +37,9 @@ export default function signUp() {
                         placeholder="name@email.com"
                     />
 
+                    <label htmlFor="about">About you</label>
+                    <textarea id="about" rows="5" cols="50"></textarea>
+
                     <label htmlFor="password">Password</label>
                     <input 
                         required 
@@ -45,11 +48,11 @@ export default function signUp() {
                         placeholder="******" 
                     />
                     
-                    <label htmlFor="repeatPassword">Repeat Password</label>
+                    <label htmlFor="repeat-password">Repeat Password</label>
                     <input 
                         required 
                         type="password" 
-                        id="repeatPassword" 
+                        id="repeat-password" 
                         placeholder="******" 
                     />
 

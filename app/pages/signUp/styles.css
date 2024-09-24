@@ -1,4 +1,4 @@
-/* 
+
 .container-form {
     width: 30vw;
     height: fit-content;
@@ -9,19 +9,19 @@
     @media screen and (max-width: 650px) {
         width: 85vw;
     }
-} */
+} 
 
-/* 
-.container-signUp {
+
+.container-signup {
     flex-direction: row;
     display: flex;
     justify-content: center;
     background-color: rgb(249 250 251 );
     width: 100vw;
     height: 100vh;
-} */
-/* 
+} 
+
 .form {
     display: flex;
     flex-direction: column;
-} */
+}
