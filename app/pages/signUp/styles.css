@@ -1,0 +1,48 @@
+label {
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+input, textarea {
+    padding: 5px;
+}
+
+.container-form {
+    width: 30vw;
+    height: fit-content;
+    margin: 100px;
+    background-color: #A4CAFE;
+    border-radius: 10px;    
+    padding: 30px;
+    @media screen and (max-width: 650px) {
+        width: 85vw;
+    }
+} 
+
+.container-signup {
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(249 250 251 );
+    width: 100vw;
+} 
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.button {
+    color:white;
+    border: 3px solid rgb(26 189 219);
+    border-radius: 5px;
+    padding: 10px 20px;
+    background-color: rgb(26 86 219 );
+    margin-top: 20px;
+}
+
+.container-button {
+    display: flex;
+    justify-content: flex-end;
+
+}

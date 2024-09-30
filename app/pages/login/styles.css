@@ -28,7 +28,6 @@
 .input {
     background: rgb(249 250 251 );
     border: 10px;
-    margin: 20px;
     padding: 10px;
     border-radius: 5px;
 }
@@ -41,11 +40,11 @@
 
 .button {
     color:white;
-    border-color: rgb(26 86 219 );
+    border: 3px solid rgb(26 189 219);
     border-radius: 5px;
     padding: 10px 20px;
     background-color: rgb(26 86 219 );
-
+    margin-top: 20px;
 }
 
 .button:hover {
@@ -56,11 +55,15 @@
 .password {
     color: black;
     font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 5px;
+
 }
 
 .login {
     color: black;
     font-weight: 700;
+    margin-bottom: 5px;
 }
 
 

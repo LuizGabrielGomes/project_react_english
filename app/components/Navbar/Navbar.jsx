@@ -12,13 +12,10 @@ export function Navbar() {
 
                 <nav className="navbar">
                     <Link href={"/pages/login"}><button className="button-navbar">Login</button></Link>
-                    <button className="button-navbar">SignUp</button>
+                    <Link href={"/pages/signUp"}><button className="button-navbar">SignUp</button></Link>
                 </nav>
             </header>
         </>
 
     )
 }
-
-
-{/* <li><Link href={"/pages/termsAndConditions"}>Termos e Condicoes de Uso</Link></li> */}
