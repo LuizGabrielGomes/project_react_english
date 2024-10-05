@@ -4,46 +4,67 @@ import "./styles.css"
 import { useState } from "react"
 
 export default function signUp() {
-//name, surname, email, password, repeat,//
-//caixa de texto(textArea): caixa de sugestoes//
+    const [name, setName] = useState("")
+    const [surname, setSurname] = useState("")
+    const [about, setabout] = useState("")
+    const [password, setPassword] = useState("")
+    const [repeatPassword, setRepeatPassword] = useState("")
+    const [email, setEmail] = useState("")
+
     return (
         <div className="container-signup">
-    
+            
             <div className="container-form">
                 <form className="form">
 
                     <label htmlFor="name">Name</label>
                     <input  
-                        required 
+                        required    
+                        value={name}
+                        onChange={(event) => {setName(event.target.value)}}
                         type="text" 
                         id="name" 
-                        placeholder="name" 
+                        placeholder="type your name" 
                     />
 
                     <label htmlFor="surname">Surname</label>
                     <input  
                         required 
                         type="text" 
+                        value={surname}
+                        onChange={(event) => {setSurname(event.target.value)}}
                         id="surname" 
-                        placeholder="surname"
+                        placeholder="type your surname"
                     />
 
                     
                     <label htmlFor="email">Email</label>
                     <input  
                         required 
-                        type="email" 
+                        type="email"
+                        value={email}
+                        onChange={(event) => {setEmail(event.target.value)}}
                         id="email" 
-                        placeholder="name@email.com"
+                        placeholder="type your e-mail"
                     />
 
                     <label htmlFor="about">About you</label>
-                    <textarea id="about" rows="5" cols="50"></textarea>
+
+                    <textarea 
+                        id="about" 
+                        value={about}
+                        onChange={(event) => {setabout(event.target.value)}}
+                        rows="5" 
+                        cols="50" 
+                        placeholder="write a short resume about you"
+                    ></textarea>
 
                     <label htmlFor="password">Password</label>
                     <input 
                         required 
-                        type="password" 
+                        type="password"
+                        value={password}
+                        onChange={(event) => {setPassword(event.target.value)}}
                         id="password" 
                         placeholder="******" 
                     />
@@ -52,6 +73,8 @@ export default function signUp() {
                     <input 
                         required 
                         type="password" 
+                        value={repeatPassword}
+                        onChange={(event) => {setRepeatPassword(event.target.value)}}
                         id="repeat-password" 
                         placeholder="******" 
                     />
@@ -61,7 +84,27 @@ export default function signUp() {
                     </div>
 
                 </form>    
-            </div>      
+            </div>
+            <div>
+                <div>Review your data below</div>
+                <div>{name}</div>
+
+                <br></br>
+
+                <div>Review your surname</div>
+                <div>{surname}</div>
+
+                <br></br>
+
+
+                <div>review your email</div>
+                <div>{email}</div>
+                
+                <br></br>
+
+                <div>review your text</div>
+                <div>{about}</div>
+            </div>    
         </div>
     )
 }
