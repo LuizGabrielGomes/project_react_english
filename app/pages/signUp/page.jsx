@@ -11,28 +11,13 @@ export default function signUp() {
     const [repeatPassword, setRepeatPassword] = useState("")
     const [email, setEmail] = useState("")
 
-    // funcao para verificar se a senha digitada esta igual nos dois campos 
-
     function verifyPassword() { 
-        
-            console.log("password", password)
-            console.log("repeatPassword", repeatPassword)
-
-        // se no passaword tem mais de um caracter mostrar ok no console
         if (repeatPassword.length > 0 ) {
-            console.log(repeatPassword.length)
-            console.log(password !== repeatPassword )
             return password !== repeatPassword  
         } else {
             return false  
         }
     }
-
-
-
-
-
-
 
     return (
         <div className="container-signup">
