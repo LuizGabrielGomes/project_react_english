@@ -21,14 +21,17 @@ export function Questions() {
         },
     };
 
-    function correction(object) {
+    function correction(event, object) {
         // Passo 1) Receber o objeto com todas as infos da questao (para sabermos a alternativa correta)
-        // console.log("object", object)
+        event.preventDefault()
 
+        console.log("object", object) 
+        console.log(event)
         // Passo 2) Quero separar a alternativa correta das demais. 
         const isCorrect = object.alternatives.map(item => {
             if(item.isCorrect === true) {
                 // Muda o estado (state) e com isso mudar a alternativa para considerar o isCorrect.
+            console.log(item.isCorrect)
                 setState(true)
                 setQuestionId(object._id)
                 setModalIsOpen(true)
@@ -46,6 +49,12 @@ export function Questions() {
     } 
     
 
+// funcao para saber se a alternativa esta correta 
+
+
+
+
+
     return (
         <>
             <Modal
@@ -53,14 +62,14 @@ export function Questions() {
                 ariaHideApp={false}
                 style={customStyles}
             >
-                <p>Congratulations, you got it right</p>
+                {state === true ? "Congratulations, you got it right" : "Incorrect option. Please try again."}
 
                 <div>
                     <button  onClick={() => handleModal()} className="button-question">Close</button>
                 </div> 
             </Modal>
 
-            <div className="question">
+            <form className="question" onSubmit={(event) => correction(event)}>
                 
                 <div>{data.map(object => {
                     return(
@@ -81,7 +90,7 @@ export function Questions() {
                             <div id="buttons" className="question-buttons">
                                 <button 
                                     className="button" 
-                                    onClick={(event) => correction(object)}
+                                    // onClick={(event) => correction(event, object)}
                                 >
                                     correction
                                 </button>
@@ -89,7 +98,7 @@ export function Questions() {
                         </div>
                     )} )}                                                            
                 </div>
-            </div>
+            </form>
         </>
     )
 }
